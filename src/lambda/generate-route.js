@@ -40,7 +40,7 @@ export function handler(event, context, callback) {
     } else {
       msg = "Route registered. Site deploying to include it. " + rootURL + code
       request.post({'url' : deployURL}, function(err, httpResponse, body) {
-        msg .= ' Triggered rebuild!'
+        msg = msg + ' Triggered rebuild!'
       })
 
     }
